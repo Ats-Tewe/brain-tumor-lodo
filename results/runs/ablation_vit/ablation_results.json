@@ -1,0 +1,652 @@
+[
+  {
+    "protocol": "merged",
+    "variant": "matched",
+    "architecture": {
+      "variant": "matched",
+      "timm_model": "vit_small_patch32_224",
+      "n_tokens": 100,
+      "embed_dim": 384,
+      "total_params": 22515076,
+      "trainable_params": 22515076,
+      "note": "100 tokens at 320px \u2014 matches the hybrid's 10x10 feature grid"
+    },
+    "training": {
+      "best_epoch": 77,
+      "best_val_loss": 0.010552421890082625,
+      "best_val_acc": 0.9911330049261083,
+      "epochs_run": 92,
+      "train_minutes": 23.55
+    },
+    "test": {
+      "accuracy": 0.9919,
+      "macro_f1": 0.9917,
+      "per_class": {
+        "glioma": {
+          "precision": 1.0,
+          "recall": 0.9862,
+          "f1": 0.9931,
+          "support": 435
+        },
+        "meningioma": {
+          "precision": 0.9736,
+          "recall": 0.9885,
+          "f1": 0.981,
+          "support": 261
+        },
+        "pituitary": {
+          "precision": 0.9931,
+          "recall": 0.9965,
+          "f1": 0.9948,
+          "support": 289
+        },
+        "notumor": {
+          "precision": 0.996,
+          "recall": 1.0,
+          "f1": 0.998,
+          "support": 252
+        }
+      },
+      "confusion_matrix": [
+        [
+          429,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          258,
+          2,
+          1
+        ],
+        [
+          0,
+          1,
+          288,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          252
+        ]
+      ],
+      "n_samples": 1237
+    },
+    "test_classes": [
+      "glioma",
+      "meningioma",
+      "pituitary",
+      "notumor"
+    ]
+  },
+  {
+    "protocol": "lodo1",
+    "variant": "matched",
+    "architecture": {
+      "variant": "matched",
+      "timm_model": "vit_small_patch32_224",
+      "n_tokens": 100,
+      "embed_dim": 384,
+      "total_params": 22515076,
+      "trainable_params": 22515076,
+      "note": "100 tokens at 320px \u2014 matches the hybrid's 10x10 feature grid"
+    },
+    "training": {
+      "best_epoch": 94,
+      "best_val_loss": 0.012094814284393395,
+      "best_val_acc": 0.987152034261242,
+      "epochs_run": 100,
+      "train_minutes": 11.98
+    },
+    "test": {
+      "accuracy": 0.9325,
+      "macro_f1": 0.9318,
+      "per_class": {
+        "glioma": {
+          "precision": 0.9252,
+          "recall": 0.9275,
+          "f1": 0.9263,
+          "support": 400
+        },
+        "meningioma": {
+          "precision": 0.9391,
+          "recall": 0.8475,
+          "f1": 0.8909,
+          "support": 400
+        },
+        "pituitary": {
+          "precision": 0.914,
+          "recall": 0.9825,
+          "f1": 0.947,
+          "support": 400
+        },
+        "notumor": {
+          "precision": 0.9534,
+          "recall": 0.9725,
+          "f1": 0.9629,
+          "support": 400
+        }
+      },
+      "confusion_matrix": [
+        [
+          371,
+          16,
+          2,
+          11
+        ],
+        [
+          25,
+          339,
+          28,
+          8
+        ],
+        [
+          2,
+          5,
+          393,
+          0
+        ],
+        [
+          3,
+          1,
+          7,
+          389
+        ]
+      ],
+      "n_samples": 1600
+    },
+    "test_classes": [
+      "glioma",
+      "meningioma",
+      "pituitary",
+      "notumor"
+    ]
+  },
+  {
+    "protocol": "lodo2",
+    "variant": "matched",
+    "architecture": {
+      "variant": "matched",
+      "timm_model": "vit_small_patch32_224",
+      "n_tokens": 100,
+      "embed_dim": 384,
+      "total_params": 22515076,
+      "trainable_params": 22515076,
+      "note": "100 tokens at 320px \u2014 matches the hybrid's 10x10 feature grid"
+    },
+    "training": {
+      "best_epoch": 49,
+      "best_val_loss": 0.01468661051989391,
+      "best_val_acc": 0.9875706214689266,
+      "epochs_run": 64,
+      "train_minutes": 14.04
+    },
+    "test": {
+      "accuracy": 0.9794,
+      "macro_f1": 0.9403,
+      "per_class": {
+        "glioma": {
+          "precision": 0.9928,
+          "recall": 0.9928,
+          "f1": 0.9928,
+          "support": 829
+        },
+        "meningioma": {
+          "precision": 0.8772,
+          "recall": 0.8621,
+          "f1": 0.8696,
+          "support": 58
+        },
+        "pituitary": {
+          "precision": 0.9611,
+          "recall": 0.9558,
+          "f1": 0.9584,
+          "support": 181
+        }
+      },
+      "confusion_matrix": [
+        [
+          823,
+          4,
+          1,
+          1
+        ],
+        [
+          2,
+          50,
+          6,
+          0
+        ],
+        [
+          4,
+          3,
+          173,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "n_samples": 1068
+    },
+    "test_classes": [
+      "glioma",
+      "meningioma",
+      "pituitary"
+    ]
+  },
+  {
+    "protocol": "lodo3",
+    "variant": "matched",
+    "architecture": {
+      "variant": "matched",
+      "timm_model": "vit_small_patch32_224",
+      "n_tokens": 100,
+      "embed_dim": 384,
+      "total_params": 22515076,
+      "trainable_params": 22515076,
+      "note": "100 tokens at 320px \u2014 matches the hybrid's 10x10 feature grid"
+    },
+    "training": {
+      "best_epoch": 86,
+      "best_val_loss": 0.008004481475549038,
+      "best_val_acc": 0.9957264957264957,
+      "epochs_run": 100,
+      "train_minutes": 17.7
+    },
+    "test": {
+      "accuracy": 0.9547,
+      "macro_f1": 0.9519,
+      "per_class": {
+        "glioma": {
+          "precision": 0.9969,
+          "recall": 0.9329,
+          "f1": 0.9639,
+          "support": 343
+        },
+        "meningioma": {
+          "precision": 0.8713,
+          "recall": 0.9868,
+          "f1": 0.9255,
+          "support": 151
+        },
+        "pituitary": {
+          "precision": 0.9941,
+          "recall": 0.9389,
+          "f1": 0.9657,
+          "support": 180
+        },
+        "notumor": {
+          "precision": 0.9156,
+          "recall": 0.993,
+          "f1": 0.9527,
+          "support": 142
+        }
+      },
+      "confusion_matrix": [
+        [
+          320,
+          13,
+          1,
+          9
+        ],
+        [
+          1,
+          149,
+          0,
+          1
+        ],
+        [
+          0,
+          8,
+          169,
+          3
+        ],
+        [
+          0,
+          1,
+          0,
+          141
+        ]
+      ],
+      "n_samples": 816
+    },
+    "test_classes": [
+      "glioma",
+      "meningioma",
+      "pituitary",
+      "notumor"
+    ]
+  },
+  {
+    "protocol": "merged",
+    "variant": "unmatched",
+    "architecture": {
+      "variant": "unmatched",
+      "timm_model": "vit_small_patch16_224",
+      "n_tokens": 400,
+      "embed_dim": 384,
+      "total_params": 21745540,
+      "trainable_params": 21745540,
+      "note": "400 tokens at 320px \u2014 the original ablation configuration"
+    },
+    "training": {
+      "best_epoch": 58,
+      "best_val_loss": 0.01250713123017211,
+      "best_val_acc": 0.9950738916256158,
+      "epochs_run": 73,
+      "train_minutes": 30.83
+    },
+    "test": {
+      "accuracy": 0.9895,
+      "macro_f1": 0.9888,
+      "per_class": {
+        "glioma": {
+          "precision": 1.0,
+          "recall": 0.9885,
+          "f1": 0.9942,
+          "support": 435
+        },
+        "meningioma": {
+          "precision": 0.9699,
+          "recall": 0.9885,
+          "f1": 0.9791,
+          "support": 261
+        },
+        "pituitary": {
+          "precision": 0.9862,
+          "recall": 0.9896,
+          "f1": 0.9879,
+          "support": 289
+        },
+        "notumor": {
+          "precision": 0.996,
+          "recall": 0.9921,
+          "f1": 0.994,
+          "support": 252
+        }
+      },
+      "confusion_matrix": [
+        [
+          430,
+          4,
+          1,
+          0
+        ],
+        [
+          0,
+          258,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          286,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          250
+        ]
+      ],
+      "n_samples": 1237
+    },
+    "test_classes": [
+      "glioma",
+      "meningioma",
+      "pituitary",
+      "notumor"
+    ]
+  },
+  {
+    "protocol": "lodo1",
+    "variant": "unmatched",
+    "architecture": {
+      "variant": "unmatched",
+      "timm_model": "vit_small_patch16_224",
+      "n_tokens": 400,
+      "embed_dim": 384,
+      "total_params": 21745540,
+      "trainable_params": 21745540,
+      "note": "400 tokens at 320px \u2014 the original ablation configuration"
+    },
+    "training": {
+      "best_epoch": 31,
+      "best_val_loss": 0.029180135970289085,
+      "best_val_acc": 0.9571734475374732,
+      "epochs_run": 46,
+      "train_minutes": 9.13
+    },
+    "test": {
+      "accuracy": 0.935,
+      "macro_f1": 0.9349,
+      "per_class": {
+        "glioma": {
+          "precision": 0.942,
+          "recall": 0.8925,
+          "f1": 0.9166,
+          "support": 400
+        },
+        "meningioma": {
+          "precision": 0.8862,
+          "recall": 0.915,
+          "f1": 0.9004,
+          "support": 400
+        },
+        "pituitary": {
+          "precision": 0.9581,
+          "recall": 0.9725,
+          "f1": 0.9653,
+          "support": 400
+        },
+        "notumor": {
+          "precision": 0.9552,
+          "recall": 0.96,
+          "f1": 0.9576,
+          "support": 400
+        }
+      },
+      "confusion_matrix": [
+        [
+          357,
+          34,
+          0,
+          9
+        ],
+        [
+          10,
+          366,
+          15,
+          9
+        ],
+        [
+          3,
+          8,
+          389,
+          0
+        ],
+        [
+          9,
+          5,
+          2,
+          384
+        ]
+      ],
+      "n_samples": 1600
+    },
+    "test_classes": [
+      "glioma",
+      "meningioma",
+      "pituitary",
+      "notumor"
+    ]
+  },
+  {
+    "protocol": "lodo2",
+    "variant": "unmatched",
+    "architecture": {
+      "variant": "unmatched",
+      "timm_model": "vit_small_patch16_224",
+      "n_tokens": 400,
+      "embed_dim": 384,
+      "total_params": 21745540,
+      "trainable_params": 21745540,
+      "note": "400 tokens at 320px \u2014 the original ablation configuration"
+    },
+    "training": {
+      "best_epoch": 78,
+      "best_val_loss": 0.005458291952167803,
+      "best_val_acc": 0.9954802259887006,
+      "epochs_run": 93,
+      "train_minutes": 34.36
+    },
+    "test": {
+      "accuracy": 0.9916,
+      "macro_f1": 0.9685,
+      "per_class": {
+        "glioma": {
+          "precision": 1.0,
+          "recall": 0.9976,
+          "f1": 0.9988,
+          "support": 829
+        },
+        "meningioma": {
+          "precision": 0.963,
+          "recall": 0.8966,
+          "f1": 0.9286,
+          "support": 58
+        },
+        "pituitary": {
+          "precision": 0.9626,
+          "recall": 0.9945,
+          "f1": 0.9783,
+          "support": 181
+        }
+      },
+      "confusion_matrix": [
+        [
+          827,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          52,
+          6,
+          0
+        ],
+        [
+          0,
+          1,
+          180,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "n_samples": 1068
+    },
+    "test_classes": [
+      "glioma",
+      "meningioma",
+      "pituitary"
+    ]
+  },
+  {
+    "protocol": "lodo3",
+    "variant": "unmatched",
+    "architecture": {
+      "variant": "unmatched",
+      "timm_model": "vit_small_patch16_224",
+      "n_tokens": 400,
+      "embed_dim": 384,
+      "total_params": 21745540,
+      "trainable_params": 21745540,
+      "note": "400 tokens at 320px \u2014 the original ablation configuration"
+    },
+    "training": {
+      "best_epoch": 61,
+      "best_val_loss": 0.010912939979276323,
+      "best_val_acc": 0.9914529914529915,
+      "epochs_run": 76,
+      "train_minutes": 22.38
+    },
+    "test": {
+      "accuracy": 0.9436,
+      "macro_f1": 0.9429,
+      "per_class": {
+        "glioma": {
+          "precision": 0.9968,
+          "recall": 0.9009,
+          "f1": 0.9464,
+          "support": 343
+        },
+        "meningioma": {
+          "precision": 0.8142,
+          "recall": 0.9868,
+          "f1": 0.8922,
+          "support": 151
+        },
+        "pituitary": {
+          "precision": 0.9831,
+          "recall": 0.9667,
+          "f1": 0.9748,
+          "support": 180
+        },
+        "notumor": {
+          "precision": 0.9452,
+          "recall": 0.9718,
+          "f1": 0.9583,
+          "support": 142
+        }
+      },
+      "confusion_matrix": [
+        [
+          309,
+          28,
+          0,
+          6
+        ],
+        [
+          0,
+          149,
+          1,
+          1
+        ],
+        [
+          0,
+          5,
+          174,
+          1
+        ],
+        [
+          1,
+          1,
+          2,
+          138
+        ]
+      ],
+      "n_samples": 816
+    },
+    "test_classes": [
+      "glioma",
+      "meningioma",
+      "pituitary",
+      "notumor"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-08-23T18:08:28.732582+00:00",
+  "git_commit": "unknown (not a git repo, or git unavailable)",
+  "python_version": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:09:02) [GCC 11.2.0]",
+  "torch_version": "2.6.0+cu124",
+  "cuda_available": true,
+  "config": {
+    "protocol": "all",
+    "variant": "both",
+    "img_size": 320,
+    "batch_size": 24,
+    "epochs": 100,
+    "patience": 15,
+    "seed": 42
+  }
+}

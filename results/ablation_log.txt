@@ -1,0 +1,255 @@
+2026-08-23 23:24:10,991 | INFO    | __main__ | Device: cuda:0
+2026-08-23 23:24:10,991 | INFO    | __main__ | ====================================================================
+2026-08-23 23:24:10,991 | INFO    | __main__ | ABLATION — MERGED | variant=matched (100 tokens at 320px — matches the hybrid's 10x10 feature grid)
+2026-08-23 23:24:10,991 | INFO    | __main__ | ====================================================================
+2026-08-23 23:24:11,028 | INFO    | __main__ |   train 9140 | val 1015 | test 1237
+2026-08-23 23:24:11,028 | INFO    | __main__ |   test classes present: ['glioma', 'meningioma', 'pituitary', 'notumor']
+2026-08-23 23:24:11,217 | INFO    | timm.models._builder | Loading pretrained weights from Hugging Face hub (timm/vit_small_patch32_224.augreg_in21k_ft_in1k)
+2026-08-23 23:24:11,475 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/timm/vit_small_patch32_224.augreg_in21k_ft_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-08-23 23:24:11,475 | INFO    | timm.models._hub | [timm/vit_small_patch32_224.augreg_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-08-23 23:24:11,480 | INFO    | timm.layers.pos_embed | Resized position embedding: (7, 7) to (10, 10).
+2026-08-23 23:24:11,566 | INFO    | __main__ |   vit_small_patch32_224 | 100 tokens | 22.52M params
+2026-08-23 23:24:27,221 | INFO    | __main__ |   epoch   1 | train 1.0002/0.4981 | val 0.3019/0.7803 | lr 6.24e-05
+/home/divclab/brain_tumor_project/venv/lib/python3.13/site-packages/torch/optim/lr_scheduler.py:243: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+2026-08-23 23:25:28,902 | INFO    | __main__ |   epoch   5 | train 0.2193/0.8369 | val 0.1574/0.8837 | lr 3.00e-04
+2026-08-23 23:26:45,645 | INFO    | __main__ |   epoch  10 | train 0.1868/0.8499 | val 0.2298/0.8453 | lr 2.98e-04
+2026-08-23 23:28:03,273 | INFO    | __main__ |   epoch  15 | train 0.1685/0.8636 | val 0.0950/0.9330 | lr 2.92e-04
+2026-08-23 23:29:19,814 | INFO    | __main__ |   epoch  20 | train 0.1406/0.8836 | val 0.0880/0.9271 | lr 2.82e-04
+2026-08-23 23:30:36,495 | INFO    | __main__ |   epoch  25 | train 0.1285/0.8908 | val 0.0665/0.9320 | lr 2.68e-04
+2026-08-23 23:31:53,143 | INFO    | __main__ |   epoch  30 | train 0.1123/0.9056 | val 0.1162/0.9064 | lr 2.52e-04
+2026-08-23 23:33:10,406 | INFO    | __main__ |   epoch  35 | train 0.0959/0.9153 | val 0.0574/0.9438 | lr 2.32e-04
+2026-08-23 23:34:27,023 | INFO    | __main__ |   epoch  40 | train 0.0836/0.9284 | val 0.0601/0.9517 | lr 2.11e-04
+2026-08-23 23:35:43,420 | INFO    | __main__ |   epoch  45 | train 0.0720/0.9380 | val 0.0571/0.9596 | lr 1.87e-04
+2026-08-23 23:37:00,445 | INFO    | __main__ |   epoch  50 | train 0.0666/0.9409 | val 0.0312/0.9754 | lr 1.63e-04
+2026-08-23 23:38:17,350 | INFO    | __main__ |   epoch  55 | train 0.0528/0.9531 | val 0.0232/0.9852 | lr 1.38e-04
+2026-08-23 23:39:33,922 | INFO    | __main__ |   epoch  60 | train 0.0493/0.9555 | val 0.0249/0.9783 | lr 1.14e-04
+2026-08-23 23:40:50,546 | INFO    | __main__ |   epoch  65 | train 0.0399/0.9655 | val 0.0163/0.9931 | lr 9.04e-05
+2026-08-23 23:42:07,687 | INFO    | __main__ |   epoch  70 | train 0.0335/0.9690 | val 0.0226/0.9862 | lr 6.87e-05
+2026-08-23 23:43:24,464 | INFO    | __main__ |   epoch  75 | train 0.0285/0.9730 | val 0.0156/0.9931 | lr 4.92e-05
+2026-08-23 23:44:41,131 | INFO    | __main__ |   epoch  80 | train 0.0229/0.9769 | val 0.0131/0.9931 | lr 3.25e-05
+2026-08-23 23:45:57,338 | INFO    | __main__ |   epoch  85 | train 0.0185/0.9812 | val 0.0161/0.9961 | lr 1.90e-05
+2026-08-23 23:47:13,621 | INFO    | __main__ |   epoch  90 | train 0.0192/0.9799 | val 0.0163/0.9941 | lr 9.10e-06
+2026-08-23 23:47:44,298 | INFO    | __main__ |   early stopping at epoch 92 (best epoch 77)
+2026-08-23 23:47:44,298 | INFO    | __main__ |   trained 92 epochs in 23.5 min | best epoch 77 (val loss 0.0106, acc 0.9911)
+2026-08-23 23:47:45,490 | INFO    | __main__ |   TEST accuracy 0.9919 | macro-F1 0.9917
+2026-08-23 23:47:45,709 | INFO    | __main__ | ====================================================================
+2026-08-23 23:47:45,709 | INFO    | __main__ | ABLATION — LODO1 | variant=matched (100 tokens at 320px — matches the hybrid's 10x10 feature grid)
+2026-08-23 23:47:45,709 | INFO    | __main__ | ====================================================================
+2026-08-23 23:47:45,729 | INFO    | __main__ |   train 4201 | val 467 | test 1600
+2026-08-23 23:47:45,729 | INFO    | __main__ |   test classes present: ['glioma', 'meningioma', 'pituitary', 'notumor']
+2026-08-23 23:47:45,915 | INFO    | timm.models._builder | Loading pretrained weights from Hugging Face hub (timm/vit_small_patch32_224.augreg_in21k_ft_in1k)
+2026-08-23 23:47:46,157 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/timm/vit_small_patch32_224.augreg_in21k_ft_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-23 23:47:46,158 | WARNING | huggingface_hub.utils._http | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-23 23:47:46,158 | INFO    | timm.models._hub | [timm/vit_small_patch32_224.augreg_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-08-23 23:47:46,162 | INFO    | timm.layers.pos_embed | Resized position embedding: (7, 7) to (10, 10).
+2026-08-23 23:47:46,190 | INFO    | __main__ |   vit_small_patch32_224 | 100 tokens | 22.52M params
+2026-08-23 23:47:53,512 | INFO    | __main__ |   epoch   1 | train 1.5831/0.3490 | val 0.5279/0.4668 | lr 6.24e-05
+2026-08-23 23:48:22,369 | INFO    | __main__ |   epoch   5 | train 0.2997/0.7817 | val 0.2417/0.6981 | lr 3.00e-04
+2026-08-23 23:48:58,165 | INFO    | __main__ |   epoch  10 | train 0.2288/0.8193 | val 0.1194/0.9165 | lr 2.98e-04
+2026-08-23 23:49:33,718 | INFO    | __main__ |   epoch  15 | train 0.1852/0.8610 | val 0.1245/0.8951 | lr 2.92e-04
+2026-08-23 23:50:10,241 | INFO    | __main__ |   epoch  20 | train 0.1697/0.8679 | val 0.0807/0.9208 | lr 2.82e-04
+2026-08-23 23:50:46,212 | INFO    | __main__ |   epoch  25 | train 0.1490/0.8779 | val 0.0497/0.9507 | lr 2.68e-04
+2026-08-23 23:51:22,239 | INFO    | __main__ |   epoch  30 | train 0.1278/0.8943 | val 0.0612/0.9336 | lr 2.52e-04
+2026-08-23 23:51:57,820 | INFO    | __main__ |   epoch  35 | train 0.1094/0.9050 | val 0.0735/0.9208 | lr 2.32e-04
+2026-08-23 23:52:33,977 | INFO    | __main__ |   epoch  40 | train 0.0933/0.9184 | val 0.0468/0.9400 | lr 2.11e-04
+2026-08-23 23:53:09,896 | INFO    | __main__ |   epoch  45 | train 0.1022/0.9169 | val 0.0327/0.9657 | lr 1.87e-04
+2026-08-23 23:53:45,820 | INFO    | __main__ |   epoch  50 | train 0.0758/0.9357 | val 0.0318/0.9722 | lr 1.63e-04
+2026-08-23 23:54:21,590 | INFO    | __main__ |   epoch  55 | train 0.0661/0.9424 | val 0.0258/0.9764 | lr 1.38e-04
+2026-08-23 23:54:57,496 | INFO    | __main__ |   epoch  60 | train 0.0496/0.9545 | val 0.0190/0.9722 | lr 1.14e-04
+2026-08-23 23:55:33,121 | INFO    | __main__ |   epoch  65 | train 0.0457/0.9598 | val 0.0340/0.9786 | lr 9.04e-05
+2026-08-23 23:56:09,135 | INFO    | __main__ |   epoch  70 | train 0.0317/0.9688 | val 0.0157/0.9829 | lr 6.87e-05
+2026-08-23 23:56:44,780 | INFO    | __main__ |   epoch  75 | train 0.0274/0.9748 | val 0.0211/0.9829 | lr 4.92e-05
+2026-08-23 23:57:20,802 | INFO    | __main__ |   epoch  80 | train 0.0269/0.9736 | val 0.0148/0.9829 | lr 3.25e-05
+2026-08-23 23:57:56,872 | INFO    | __main__ |   epoch  85 | train 0.0217/0.9800 | val 0.0157/0.9914 | lr 1.90e-05
+2026-08-23 23:58:32,739 | INFO    | __main__ |   epoch  90 | train 0.0230/0.9748 | val 0.0130/0.9893 | lr 9.10e-06
+2026-08-23 23:59:09,184 | INFO    | __main__ |   epoch  95 | train 0.0172/0.9814 | val 0.0158/0.9914 | lr 3.04e-06
+2026-08-23 23:59:44,790 | INFO    | __main__ |   epoch 100 | train 0.0173/0.9831 | val 0.0159/0.9893 | lr 1.00e-06
+2026-08-23 23:59:44,790 | INFO    | __main__ |   trained 100 epochs in 12.0 min | best epoch 94 (val loss 0.0121, acc 0.9872)
+2026-08-23 23:59:46,389 | INFO    | __main__ |   TEST accuracy 0.9325 | macro-F1 0.9318
+2026-08-23 23:59:46,610 | INFO    | __main__ | ====================================================================
+2026-08-23 23:59:46,610 | INFO    | __main__ | ABLATION — LODO2 | variant=matched (100 tokens at 320px — matches the hybrid's 10x10 feature grid)
+2026-08-23 23:59:46,610 | INFO    | __main__ | ====================================================================
+2026-08-23 23:59:46,643 | INFO    | __main__ |   train 7967 | val 885 | test 1068
+2026-08-23 23:59:46,643 | INFO    | __main__ |   test classes present: ['glioma', 'meningioma', 'pituitary']
+2026-08-23 23:59:46,851 | INFO    | timm.models._builder | Loading pretrained weights from Hugging Face hub (timm/vit_small_patch32_224.augreg_in21k_ft_in1k)
+2026-08-23 23:59:47,095 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/timm/vit_small_patch32_224.augreg_in21k_ft_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-08-23 23:59:47,095 | INFO    | timm.models._hub | [timm/vit_small_patch32_224.augreg_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-08-23 23:59:47,099 | INFO    | timm.layers.pos_embed | Resized position embedding: (7, 7) to (10, 10).
+2026-08-23 23:59:47,127 | INFO    | __main__ |   vit_small_patch32_224 | 100 tokens | 22.52M params
+2026-08-24 00:00:00,605 | INFO    | __main__ |   epoch   1 | train 1.0590/0.4648 | val 0.3613/0.7220 | lr 6.24e-05
+2026-08-24 00:00:53,783 | INFO    | __main__ |   epoch   5 | train 0.2284/0.8323 | val 0.0982/0.9266 | lr 3.00e-04
+2026-08-24 00:01:59,422 | INFO    | __main__ |   epoch  10 | train 0.1949/0.8436 | val 0.0920/0.9243 | lr 2.98e-04
+2026-08-24 00:03:05,365 | INFO    | __main__ |   epoch  15 | train 0.1770/0.8504 | val 0.1192/0.9051 | lr 2.92e-04
+2026-08-24 00:04:11,284 | INFO    | __main__ |   epoch  20 | train 0.1583/0.8737 | val 0.0786/0.9232 | lr 2.82e-04
+2026-08-24 00:05:16,886 | INFO    | __main__ |   epoch  25 | train 0.1347/0.8897 | val 0.0888/0.9311 | lr 2.68e-04
+2026-08-24 00:06:22,654 | INFO    | __main__ |   epoch  30 | train 0.1098/0.9067 | val 0.0824/0.9401 | lr 2.52e-04
+2026-08-24 00:07:28,310 | INFO    | __main__ |   epoch  35 | train 0.1055/0.9125 | val 0.0479/0.9672 | lr 2.32e-04
+2026-08-24 00:08:33,874 | INFO    | __main__ |   epoch  40 | train 0.0941/0.9204 | val 0.0703/0.9525 | lr 2.11e-04
+2026-08-24 00:09:40,329 | INFO    | __main__ |   epoch  45 | train 0.0798/0.9352 | val 0.0318/0.9763 | lr 1.87e-04
+2026-08-24 00:10:46,191 | INFO    | __main__ |   epoch  50 | train 0.0666/0.9467 | val 0.0309/0.9740 | lr 1.63e-04
+2026-08-24 00:11:51,586 | INFO    | __main__ |   epoch  55 | train 0.0588/0.9464 | val 0.0204/0.9831 | lr 1.38e-04
+2026-08-24 00:12:56,860 | INFO    | __main__ |   epoch  60 | train 0.0472/0.9593 | val 0.0206/0.9842 | lr 1.14e-04
+2026-08-24 00:13:49,421 | INFO    | __main__ |   early stopping at epoch 64 (best epoch 49)
+2026-08-24 00:13:49,421 | INFO    | __main__ |   trained 64 epochs in 14.0 min | best epoch 49 (val loss 0.0147, acc 0.9876)
+2026-08-24 00:13:50,495 | INFO    | __main__ |   TEST accuracy 0.9794 | macro-F1 0.9403
+2026-08-24 00:13:50,715 | INFO    | __main__ | ====================================================================
+2026-08-24 00:13:50,715 | INFO    | __main__ | ABLATION — LODO3 | variant=matched (100 tokens at 320px — matches the hybrid's 10x10 feature grid)
+2026-08-24 00:13:50,715 | INFO    | __main__ | ====================================================================
+2026-08-24 00:13:50,830 | INFO    | __main__ |   train 6314 | val 702 | test 816
+2026-08-24 00:13:50,830 | INFO    | __main__ |   test classes present: ['glioma', 'meningioma', 'pituitary', 'notumor']
+2026-08-24 00:13:51,032 | INFO    | timm.models._builder | Loading pretrained weights from Hugging Face hub (timm/vit_small_patch32_224.augreg_in21k_ft_in1k)
+2026-08-24 00:13:51,275 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/timm/vit_small_patch32_224.augreg_in21k_ft_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-08-24 00:13:51,276 | INFO    | timm.models._hub | [timm/vit_small_patch32_224.augreg_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-08-24 00:13:51,280 | INFO    | timm.layers.pos_embed | Resized position embedding: (7, 7) to (10, 10).
+2026-08-24 00:13:51,308 | INFO    | __main__ |   vit_small_patch32_224 | 100 tokens | 22.52M params
+2026-08-24 00:14:01,965 | INFO    | __main__ |   epoch   1 | train 1.0558/0.4731 | val 0.2642/0.7863 | lr 6.24e-05
+2026-08-24 00:14:44,587 | INFO    | __main__ |   epoch   5 | train 0.2060/0.8419 | val 0.1196/0.9046 | lr 3.00e-04
+2026-08-24 00:15:37,432 | INFO    | __main__ |   epoch  10 | train 0.1691/0.8660 | val 0.0896/0.9202 | lr 2.98e-04
+2026-08-24 00:16:30,676 | INFO    | __main__ |   epoch  15 | train 0.1438/0.8839 | val 0.0921/0.9103 | lr 2.92e-04
+2026-08-24 00:17:24,233 | INFO    | __main__ |   epoch  20 | train 0.1385/0.8790 | val 0.0591/0.9501 | lr 2.82e-04
+2026-08-24 00:18:17,239 | INFO    | __main__ |   epoch  25 | train 0.1084/0.9037 | val 0.0376/0.9601 | lr 2.68e-04
+2026-08-24 00:19:10,428 | INFO    | __main__ |   epoch  30 | train 0.0973/0.9151 | val 0.0423/0.9573 | lr 2.52e-04
+2026-08-24 00:20:03,565 | INFO    | __main__ |   epoch  35 | train 0.0891/0.9260 | val 0.0395/0.9573 | lr 2.32e-04
+2026-08-24 00:20:57,043 | INFO    | __main__ |   epoch  40 | train 0.0780/0.9302 | val 0.0474/0.9558 | lr 2.11e-04
+2026-08-24 00:21:49,856 | INFO    | __main__ |   epoch  45 | train 0.0669/0.9395 | val 0.0277/0.9729 | lr 1.87e-04
+2026-08-24 00:22:42,819 | INFO    | __main__ |   epoch  50 | train 0.0612/0.9439 | val 0.0290/0.9744 | lr 1.63e-04
+2026-08-24 00:23:35,810 | INFO    | __main__ |   epoch  55 | train 0.0528/0.9520 | val 0.0254/0.9744 | lr 1.38e-04
+2026-08-24 00:24:28,649 | INFO    | __main__ |   epoch  60 | train 0.0446/0.9590 | val 0.0247/0.9815 | lr 1.14e-04
+2026-08-24 00:25:21,567 | INFO    | __main__ |   epoch  65 | train 0.0357/0.9656 | val 0.0131/0.9943 | lr 9.04e-05
+2026-08-24 00:26:14,687 | INFO    | __main__ |   epoch  70 | train 0.0311/0.9705 | val 0.0111/0.9929 | lr 6.87e-05
+2026-08-24 00:27:07,639 | INFO    | __main__ |   epoch  75 | train 0.0233/0.9751 | val 0.0131/0.9915 | lr 4.92e-05
+2026-08-24 00:28:01,201 | INFO    | __main__ |   epoch  80 | train 0.0209/0.9797 | val 0.0143/0.9915 | lr 3.25e-05
+2026-08-24 00:28:54,257 | INFO    | __main__ |   epoch  85 | train 0.0200/0.9815 | val 0.0088/0.9900 | lr 1.90e-05
+2026-08-24 00:29:47,297 | INFO    | __main__ |   epoch  90 | train 0.0189/0.9807 | val 0.0099/0.9929 | lr 9.10e-06
+2026-08-24 00:30:40,500 | INFO    | __main__ |   epoch  95 | train 0.0189/0.9829 | val 0.0105/0.9929 | lr 3.04e-06
+2026-08-24 00:31:33,363 | INFO    | __main__ |   epoch 100 | train 0.0153/0.9867 | val 0.0104/0.9929 | lr 1.00e-06
+2026-08-24 00:31:33,363 | INFO    | __main__ |   trained 100 epochs in 17.7 min | best epoch 86 (val loss 0.0080, acc 0.9957)
+2026-08-24 00:31:34,242 | INFO    | __main__ |   TEST accuracy 0.9547 | macro-F1 0.9519
+2026-08-24 00:31:34,455 | INFO    | __main__ | ====================================================================
+2026-08-24 00:31:34,455 | INFO    | __main__ | ABLATION — MERGED | variant=unmatched (400 tokens at 320px — the original ablation configuration)
+2026-08-24 00:31:34,455 | INFO    | __main__ | ====================================================================
+2026-08-24 00:31:34,489 | INFO    | __main__ |   train 9140 | val 1015 | test 1237
+2026-08-24 00:31:34,489 | INFO    | __main__ |   test classes present: ['glioma', 'meningioma', 'pituitary', 'notumor']
+2026-08-24 00:31:34,663 | INFO    | timm.models._builder | Loading pretrained weights from Hugging Face hub (timm/vit_small_patch16_224.augreg_in21k_ft_in1k)
+2026-08-24 00:31:34,933 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/timm/vit_small_patch16_224.augreg_in21k_ft_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-08-24 00:31:38,852 | INFO    | timm.models._hub | [timm/vit_small_patch16_224.augreg_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-08-24 00:31:38,856 | INFO    | timm.layers.pos_embed | Resized position embedding: (14, 14) to (20, 20).
+2026-08-24 00:31:38,884 | INFO    | __main__ |   vit_small_patch16_224 | 400 tokens | 21.75M params
+2026-08-24 00:32:04,175 | INFO    | __main__ |   epoch   1 | train 0.9091/0.4993 | val 0.2902/0.7764 | lr 6.24e-05
+2026-08-24 00:33:45,514 | INFO    | __main__ |   epoch   5 | train 0.1626/0.8778 | val 0.1739/0.8828 | lr 3.00e-04
+2026-08-24 00:35:52,165 | INFO    | __main__ |   epoch  10 | train 0.1284/0.8989 | val 0.0782/0.9507 | lr 2.98e-04
+2026-08-24 00:37:59,015 | INFO    | __main__ |   epoch  15 | train 0.1069/0.9126 | val 0.0479/0.9557 | lr 2.92e-04
+2026-08-24 00:40:05,677 | INFO    | __main__ |   epoch  20 | train 0.0926/0.9241 | val 0.0399/0.9734 | lr 2.82e-04
+2026-08-24 00:42:12,317 | INFO    | __main__ |   epoch  25 | train 0.0722/0.9408 | val 0.0454/0.9576 | lr 2.68e-04
+2026-08-24 00:44:19,014 | INFO    | __main__ |   epoch  30 | train 0.0688/0.9422 | val 0.0621/0.9596 | lr 2.52e-04
+2026-08-24 00:46:25,819 | INFO    | __main__ |   epoch  35 | train 0.0574/0.9513 | val 0.0309/0.9842 | lr 2.32e-04
+2026-08-24 00:48:32,428 | INFO    | __main__ |   epoch  40 | train 0.0444/0.9623 | val 0.0273/0.9833 | lr 2.11e-04
+2026-08-24 00:50:39,297 | INFO    | __main__ |   epoch  45 | train 0.0410/0.9649 | val 0.0163/0.9911 | lr 1.87e-04
+2026-08-24 00:52:45,869 | INFO    | __main__ |   epoch  50 | train 0.0338/0.9694 | val 0.0322/0.9813 | lr 1.63e-04
+2026-08-24 00:54:52,561 | INFO    | __main__ |   epoch  55 | train 0.0315/0.9740 | val 0.0152/0.9941 | lr 1.38e-04
+2026-08-24 00:56:59,296 | INFO    | __main__ |   epoch  60 | train 0.0277/0.9756 | val 0.0135/0.9931 | lr 1.14e-04
+2026-08-24 00:59:05,877 | INFO    | __main__ |   epoch  65 | train 0.0231/0.9791 | val 0.0131/0.9970 | lr 9.04e-05
+2026-08-24 01:01:12,484 | INFO    | __main__ |   epoch  70 | train 0.0184/0.9810 | val 0.0178/0.9941 | lr 6.87e-05
+2026-08-24 01:02:28,483 | INFO    | __main__ |   early stopping at epoch 73 (best epoch 58)
+2026-08-24 01:02:28,484 | INFO    | __main__ |   trained 73 epochs in 30.8 min | best epoch 58 (val loss 0.0125, acc 0.9951)
+2026-08-24 01:02:29,865 | INFO    | __main__ |   TEST accuracy 0.9895 | macro-F1 0.9888
+2026-08-24 01:02:30,084 | INFO    | __main__ | ====================================================================
+2026-08-24 01:02:30,084 | INFO    | __main__ | ABLATION — LODO1 | variant=unmatched (400 tokens at 320px — the original ablation configuration)
+2026-08-24 01:02:30,084 | INFO    | __main__ | ====================================================================
+2026-08-24 01:02:30,104 | INFO    | __main__ |   train 4201 | val 467 | test 1600
+2026-08-24 01:02:30,104 | INFO    | __main__ |   test classes present: ['glioma', 'meningioma', 'pituitary', 'notumor']
+2026-08-24 01:02:30,296 | INFO    | timm.models._builder | Loading pretrained weights from Hugging Face hub (timm/vit_small_patch16_224.augreg_in21k_ft_in1k)
+2026-08-24 01:02:30,547 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/timm/vit_small_patch16_224.augreg_in21k_ft_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-08-24 01:02:30,547 | INFO    | timm.models._hub | [timm/vit_small_patch16_224.augreg_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-08-24 01:02:30,551 | INFO    | timm.layers.pos_embed | Resized position embedding: (14, 14) to (20, 20).
+2026-08-24 01:02:30,580 | INFO    | __main__ |   vit_small_patch16_224 | 400 tokens | 21.75M params
+2026-08-24 01:02:42,515 | INFO    | __main__ |   epoch   1 | train 1.3743/0.3942 | val 0.4063/0.6510 | lr 6.24e-05
+2026-08-24 01:03:30,327 | INFO    | __main__ |   epoch   5 | train 0.2298/0.8412 | val 0.1993/0.7752 | lr 3.00e-04
+2026-08-24 01:04:29,794 | INFO    | __main__ |   epoch  10 | train 0.1508/0.8867 | val 0.2215/0.8779 | lr 2.98e-04
+2026-08-24 01:05:29,426 | INFO    | __main__ |   epoch  15 | train 0.1414/0.8957 | val 0.0702/0.9143 | lr 2.92e-04
+2026-08-24 01:06:29,078 | INFO    | __main__ |   epoch  20 | train 0.1200/0.9086 | val 0.0787/0.9251 | lr 2.82e-04
+2026-08-24 01:07:28,652 | INFO    | __main__ |   epoch  25 | train 0.0953/0.9257 | val 0.0509/0.9529 | lr 2.68e-04
+2026-08-24 01:08:28,250 | INFO    | __main__ |   epoch  30 | train 0.0795/0.9348 | val 0.0365/0.9593 | lr 2.52e-04
+2026-08-24 01:09:27,788 | INFO    | __main__ |   epoch  35 | train 0.0636/0.9474 | val 0.0395/0.9636 | lr 2.32e-04
+2026-08-24 01:10:27,241 | INFO    | __main__ |   epoch  40 | train 0.0627/0.9453 | val 0.0496/0.9550 | lr 2.11e-04
+2026-08-24 01:11:26,698 | INFO    | __main__ |   epoch  45 | train 0.0582/0.9510 | val 0.0335/0.9486 | lr 1.87e-04
+2026-08-24 01:11:38,601 | INFO    | __main__ |   early stopping at epoch 46 (best epoch 31)
+2026-08-24 01:11:38,601 | INFO    | __main__ |   trained 46 epochs in 9.1 min | best epoch 31 (val loss 0.0292, acc 0.9572)
+2026-08-24 01:11:40,292 | INFO    | __main__ |   TEST accuracy 0.9350 | macro-F1 0.9349
+2026-08-24 01:11:40,503 | INFO    | __main__ | ====================================================================
+2026-08-24 01:11:40,503 | INFO    | __main__ | ABLATION — LODO2 | variant=unmatched (400 tokens at 320px — the original ablation configuration)
+2026-08-24 01:11:40,503 | INFO    | __main__ | ====================================================================
+2026-08-24 01:11:40,534 | INFO    | __main__ |   train 7967 | val 885 | test 1068
+2026-08-24 01:11:40,534 | INFO    | __main__ |   test classes present: ['glioma', 'meningioma', 'pituitary']
+2026-08-24 01:11:40,712 | INFO    | timm.models._builder | Loading pretrained weights from Hugging Face hub (timm/vit_small_patch16_224.augreg_in21k_ft_in1k)
+2026-08-24 01:11:40,951 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/timm/vit_small_patch16_224.augreg_in21k_ft_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-08-24 01:11:40,951 | INFO    | timm.models._hub | [timm/vit_small_patch16_224.augreg_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-08-24 01:11:40,955 | INFO    | timm.layers.pos_embed | Resized position embedding: (14, 14) to (20, 20).
+2026-08-24 01:11:40,983 | INFO    | __main__ |   vit_small_patch16_224 | 400 tokens | 21.75M params
+2026-08-24 01:12:03,178 | INFO    | __main__ |   epoch   1 | train 0.8979/0.5159 | val 0.2675/0.7751 | lr 6.24e-05
+2026-08-24 01:13:31,942 | INFO    | __main__ |   epoch   5 | train 0.1584/0.8806 | val 0.0851/0.9390 | lr 3.00e-04
+2026-08-24 01:15:22,881 | INFO    | __main__ |   epoch  10 | train 0.1296/0.8981 | val 0.1101/0.9119 | lr 2.98e-04
+2026-08-24 01:17:13,699 | INFO    | __main__ |   epoch  15 | train 0.1127/0.9095 | val 0.0914/0.9130 | lr 2.92e-04
+2026-08-24 01:19:04,804 | INFO    | __main__ |   epoch  20 | train 0.0937/0.9283 | val 0.0670/0.9559 | lr 2.82e-04
+2026-08-24 01:20:55,643 | INFO    | __main__ |   epoch  25 | train 0.0791/0.9357 | val 0.0377/0.9706 | lr 2.68e-04
+2026-08-24 01:22:46,613 | INFO    | __main__ |   epoch  30 | train 0.0699/0.9445 | val 0.0298/0.9819 | lr 2.52e-04
+2026-08-24 01:24:37,337 | INFO    | __main__ |   epoch  35 | train 0.0588/0.9526 | val 0.0225/0.9831 | lr 2.32e-04
+2026-08-24 01:26:28,303 | INFO    | __main__ |   epoch  40 | train 0.0537/0.9569 | val 0.0102/0.9887 | lr 2.11e-04
+2026-08-24 01:28:19,080 | INFO    | __main__ |   epoch  45 | train 0.0474/0.9612 | val 0.0227/0.9910 | lr 1.87e-04
+2026-08-24 01:30:09,765 | INFO    | __main__ |   epoch  50 | train 0.0350/0.9713 | val 0.0168/0.9864 | lr 1.63e-04
+2026-08-24 01:32:00,606 | INFO    | __main__ |   epoch  55 | train 0.0332/0.9716 | val 0.0118/0.9910 | lr 1.38e-04
+2026-08-24 01:33:51,484 | INFO    | __main__ |   epoch  60 | train 0.0262/0.9780 | val 0.0130/0.9932 | lr 1.14e-04
+2026-08-24 01:35:42,202 | INFO    | __main__ |   epoch  65 | train 0.0215/0.9800 | val 0.0078/0.9944 | lr 9.04e-05
+2026-08-24 01:37:33,002 | INFO    | __main__ |   epoch  70 | train 0.0155/0.9856 | val 0.0117/0.9932 | lr 6.87e-05
+2026-08-24 01:39:23,750 | INFO    | __main__ |   epoch  75 | train 0.0154/0.9867 | val 0.0069/0.9944 | lr 4.92e-05
+2026-08-24 01:41:14,583 | INFO    | __main__ |   epoch  80 | train 0.0132/0.9877 | val 0.0127/0.9944 | lr 3.25e-05
+2026-08-24 01:43:05,318 | INFO    | __main__ |   epoch  85 | train 0.0111/0.9900 | val 0.0109/0.9955 | lr 1.90e-05
+2026-08-24 01:44:56,057 | INFO    | __main__ |   epoch  90 | train 0.0078/0.9907 | val 0.0148/0.9955 | lr 9.10e-06
+2026-08-24 01:46:02,533 | INFO    | __main__ |   early stopping at epoch 93 (best epoch 78)
+2026-08-24 01:46:02,533 | INFO    | __main__ |   trained 93 epochs in 34.4 min | best epoch 78 (val loss 0.0055, acc 0.9955)
+2026-08-24 01:46:03,770 | INFO    | __main__ |   TEST accuracy 0.9916 | macro-F1 0.9685
+2026-08-24 01:46:03,976 | INFO    | __main__ | ====================================================================
+2026-08-24 01:46:03,976 | INFO    | __main__ | ABLATION — LODO3 | variant=unmatched (400 tokens at 320px — the original ablation configuration)
+2026-08-24 01:46:03,976 | INFO    | __main__ | ====================================================================
+2026-08-24 01:46:04,000 | INFO    | __main__ |   train 6314 | val 702 | test 816
+2026-08-24 01:46:04,000 | INFO    | __main__ |   test classes present: ['glioma', 'meningioma', 'pituitary', 'notumor']
+2026-08-24 01:46:04,268 | INFO    | timm.models._builder | Loading pretrained weights from Hugging Face hub (timm/vit_small_patch16_224.augreg_in21k_ft_in1k)
+2026-08-24 01:46:04,536 | INFO    | httpx | HTTP Request: HEAD https://huggingface.co/timm/vit_small_patch16_224.augreg_in21k_ft_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-08-24 01:46:04,537 | INFO    | timm.models._hub | [timm/vit_small_patch16_224.augreg_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-08-24 01:46:04,541 | INFO    | timm.layers.pos_embed | Resized position embedding: (14, 14) to (20, 20).
+2026-08-24 01:46:04,569 | INFO    | __main__ |   vit_small_patch16_224 | 400 tokens | 21.75M params
+2026-08-24 01:46:22,266 | INFO    | __main__ |   epoch   1 | train 0.9593/0.4994 | val 0.2346/0.8177 | lr 6.24e-05
+2026-08-24 01:47:33,075 | INFO    | __main__ |   epoch   5 | train 0.1564/0.8888 | val 0.1317/0.9103 | lr 3.00e-04
+2026-08-24 01:49:01,483 | INFO    | __main__ |   epoch  10 | train 0.1284/0.8963 | val 0.1396/0.9074 | lr 2.98e-04
+2026-08-24 01:50:29,923 | INFO    | __main__ |   epoch  15 | train 0.0992/0.9186 | val 0.0808/0.9345 | lr 2.92e-04
+2026-08-24 01:51:58,408 | INFO    | __main__ |   epoch  20 | train 0.0924/0.9246 | val 0.0561/0.9387 | lr 2.82e-04
+2026-08-24 01:53:26,752 | INFO    | __main__ |   epoch  25 | train 0.0725/0.9351 | val 0.0170/0.9858 | lr 2.68e-04
+2026-08-24 01:54:54,998 | INFO    | __main__ |   epoch  30 | train 0.0638/0.9468 | val 0.0373/0.9687 | lr 2.52e-04
+2026-08-24 01:56:23,298 | INFO    | __main__ |   epoch  35 | train 0.0549/0.9517 | val 0.0262/0.9772 | lr 2.32e-04
+2026-08-24 01:57:51,609 | INFO    | __main__ |   epoch  40 | train 0.0495/0.9583 | val 0.0274/0.9758 | lr 2.11e-04
+2026-08-24 01:59:19,887 | INFO    | __main__ |   epoch  45 | train 0.0438/0.9653 | val 0.0146/0.9858 | lr 1.87e-04
+2026-08-24 02:00:48,232 | INFO    | __main__ |   epoch  50 | train 0.0364/0.9659 | val 0.0235/0.9886 | lr 1.63e-04
+2026-08-24 02:02:16,676 | INFO    | __main__ |   epoch  55 | train 0.0324/0.9705 | val 0.0110/0.9943 | lr 1.38e-04
+2026-08-24 02:03:44,947 | INFO    | __main__ |   epoch  60 | train 0.0279/0.9743 | val 0.0118/0.9943 | lr 1.14e-04
+2026-08-24 02:05:13,337 | INFO    | __main__ |   epoch  65 | train 0.0233/0.9786 | val 0.0179/0.9929 | lr 9.04e-05
+2026-08-24 02:06:41,629 | INFO    | __main__ |   epoch  70 | train 0.0212/0.9800 | val 0.0141/0.9915 | lr 6.87e-05
+2026-08-24 02:08:09,883 | INFO    | __main__ |   epoch  75 | train 0.0149/0.9856 | val 0.0131/0.9929 | lr 4.92e-05
+2026-08-24 02:08:27,520 | INFO    | __main__ |   early stopping at epoch 76 (best epoch 61)
+2026-08-24 02:08:27,520 | INFO    | __main__ |   trained 76 epochs in 22.4 min | best epoch 61 (val loss 0.0109, acc 0.9915)
+2026-08-24 02:08:28,512 | INFO    | __main__ |   TEST accuracy 0.9436 | macro-F1 0.9429
+2026-08-24 02:08:28,733 | INFO    | __main__ | 
+====================================================================
+2026-08-24 02:08:28,734 | INFO    | __main__ | SUMMARY
+2026-08-24 02:08:28,734 | INFO    | __main__ | ====================================================================
+2026-08-24 02:08:28,734 | INFO    | __main__ |   merged   matched    tokens=100  acc=0.9919  macro-F1=0.9917
+2026-08-24 02:08:28,734 | INFO    | __main__ |   lodo1    matched    tokens=100  acc=0.9325  macro-F1=0.9318
+2026-08-24 02:08:28,734 | INFO    | __main__ |   lodo2    matched    tokens=100  acc=0.9794  macro-F1=0.9403
+2026-08-24 02:08:28,734 | INFO    | __main__ |   lodo3    matched    tokens=100  acc=0.9547  macro-F1=0.9519
+2026-08-24 02:08:28,734 | INFO    | __main__ |   merged   unmatched  tokens=400  acc=0.9895  macro-F1=0.9888
+2026-08-24 02:08:28,734 | INFO    | __main__ |   lodo1    unmatched  tokens=400  acc=0.9350  macro-F1=0.9349
+2026-08-24 02:08:28,734 | INFO    | __main__ |   lodo2    unmatched  tokens=400  acc=0.9916  macro-F1=0.9685
+2026-08-24 02:08:28,734 | INFO    | __main__ |   lodo3    unmatched  tokens=400  acc=0.9436  macro-F1=0.9429
+2026-08-24 02:08:28,734 | INFO    | __main__ | 
+Compare the 'matched' rows against the hybrid's numbers in outputs/results/<protocol>/test_metrics.json. That difference is what contribution C6 should cite.

@@ -1,0 +1,102 @@
+{
+  "protocol": "lodo3",
+  "description": "LODO Round 3 (Train: Kaggle+Figshare, Test: Mendeley)",
+  "img_size": 320,
+  "n_test": 816,
+  "present_classes": [
+    "glioma",
+    "meningioma",
+    "pituitary",
+    "notumor"
+  ],
+  "target-kfold": {
+    "mode": "target-kfold",
+    "k": 5,
+    "T_star_mean": 1.4705,
+    "T_star_std": 0.0369,
+    "per_fold": [
+      {
+        "fold": 1,
+        "n_fit": 651,
+        "n_eval": 165,
+        "T_star": 1.4196,
+        "ece_before": 0.1045,
+        "ece_after": 0.0548
+      },
+      {
+        "fold": 2,
+        "n_fit": 652,
+        "n_eval": 164,
+        "T_star": 1.4948,
+        "ece_before": 0.0592,
+        "ece_after": 0.0656
+      },
+      {
+        "fold": 3,
+        "n_fit": 653,
+        "n_eval": 163,
+        "T_star": 1.467,
+        "ece_before": 0.0714,
+        "ece_after": 0.0434
+      },
+      {
+        "fold": 4,
+        "n_fit": 654,
+        "n_eval": 162,
+        "T_star": 1.5253,
+        "ece_before": 0.0316,
+        "ece_after": 0.0624
+      },
+      {
+        "fold": 5,
+        "n_fit": 654,
+        "n_eval": 162,
+        "T_star": 1.4459,
+        "ece_before": 0.0857,
+        "ece_after": 0.0736
+      }
+    ],
+    "before": {
+      "ece": 0.067,
+      "nll": 0.4158,
+      "brier": 0.181,
+      "accuracy": 0.8885
+    },
+    "after": {
+      "ece": 0.0495,
+      "nll": 0.364,
+      "brier": 0.1691,
+      "accuracy": 0.8885
+    }
+  },
+  "source-val": {
+    "mode": "source-val",
+    "n_val": 700,
+    "split_source": "module3_training.train.split_train_val",
+    "T_star": 0.3792,
+    "val_before": {
+      "ece": 0.0112,
+      "nll": 0.0137,
+      "brier": 0.0028,
+      "accuracy": 0.9986
+    },
+    "val_after": {
+      "ece": 0.0021,
+      "nll": 0.0032,
+      "brier": 0.0022,
+      "accuracy": 0.9986
+    },
+    "before": {
+      "ece": 0.067,
+      "nll": 0.4158,
+      "brier": 0.181,
+      "accuracy": 0.8885
+    },
+    "after": {
+      "ece": 0.1003,
+      "nll": 0.9722,
+      "brier": 0.2088,
+      "accuracy": 0.8885
+    }
+  }
+}

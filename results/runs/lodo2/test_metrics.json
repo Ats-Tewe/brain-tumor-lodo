@@ -1,0 +1,100 @@
+{
+  "vit": {
+    "accuracy": 0.9925,
+    "macro_precision": 0.9839,
+    "macro_recall": 0.9633,
+    "macro_f1": 0.9729,
+    "macro_auc": 0.9997,
+    "per_class": {
+      "glioma": {
+        "precision": 0.9976,
+        "recall": 0.9988,
+        "f1": 0.9982,
+        "auc": 0.9998,
+        "support": 829,
+        "tp": 828,
+        "fp": 2,
+        "fn": 1,
+        "tn": 237
+      },
+      "meningioma": {
+        "precision": 0.9811,
+        "recall": 0.8966,
+        "f1": 0.9369,
+        "auc": 0.9994,
+        "support": 58,
+        "tp": 52,
+        "fp": 1,
+        "fn": 6,
+        "tn": 1009
+      },
+      "pituitary": {
+        "precision": 0.973,
+        "recall": 0.9945,
+        "f1": 0.9836,
+        "auc": 0.9999,
+        "support": 181,
+        "tp": 180,
+        "fp": 5,
+        "fn": 1,
+        "tn": 882
+      }
+    },
+    "confusion_matrix": [
+      [
+        828,
+        1,
+        0
+      ],
+      [
+        1,
+        52,
+        5
+      ],
+      [
+        1,
+        0,
+        180
+      ]
+    ]
+  },
+  "cnn": {
+    "accuracy": 0.9878,
+    "macro_f1": 0.9635,
+    "confusion_matrix": [
+      [
+        826,
+        2,
+        0
+      ],
+      [
+        1,
+        51,
+        6
+      ],
+      [
+        2,
+        0,
+        178
+      ]
+    ]
+  },
+  "n_samples": 1068,
+  "present_classes": [
+    "glioma",
+    "meningioma",
+    "pituitary"
+  ],
+  "protocol": "lodo2",
+  "description": "LODO Round 2 (Test: Figshare)",
+  "img_size": 320,
+  "tta": true,
+  "bootstrap_ci_meningioma": {
+    "f1_lo": 0.8842,
+    "f1_hi": 0.9811
+  },
+  "notumor_separate_eval": {
+    "n_samples": 400,
+    "accuracy": 1.0
+  }
+}

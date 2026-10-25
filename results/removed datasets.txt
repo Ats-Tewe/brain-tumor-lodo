@@ -1,0 +1,306 @@
+(venv) PS D:\brain_tumor_project> python module1_data_prep\step3_deduplicate.py
+======================================================================
+  MODULE 1 - STEP 3: Cross-Dataset Deduplication
+  Datasets: Kaggle (A) | Figshare (B) | Mendeley (C)
+======================================================================
+
+  Method  : pHash (256-bit perceptual hash)
+  Threshold: Hamming distance <= 2
+  Guard   : Same class only (no cross-class false positives)
+  Priority: Kaggle > Mendeley > Figshare
+
+[0/5] Cleaning previous output...
+  Removing previous output: D:\brain_tumor_project\outputs\deduplicated
+  Removed. Starting fresh.
+
+[1/5] Collecting all image paths...
+  [A] Collecting Kaggle...
+  [B] Collecting Figshare...
+  [C] Collecting Mendeley...
+
+  Total collected: 22,328
+    kaggle      :   7200 images
+    figshare    :   3064 images
+    mendeley    :  12064 images
+
+[2/5] Computing pHash fingerprints...
+  Hashing 22,328 images...
+
+  Hashing: 100%|████████████████████████████████████████████████████████████████| 22328/22328 [08:18<00:00, 44.76img/s]
+
+  Newly hashed: 22,328  |  From cache: 0  |  Failed: 0
+
+  Total successfully hashed: 22,328
+
+[3/5] Detecting cross-dataset duplicates (same class only)...
+
+  Comparing kaggle vs figshare  [same class only, threshold=2]
+    [glioma] 301 duplicates found
+    [meningioma] 626 duplicates found
+    [pituitary] 753 duplicates found
+  Subtotal kaggle vs figshare: 1680 duplicates
+
+  Comparing kaggle vs mendeley  [same class only, threshold=2]
+    [glioma] 2115 duplicates found
+    [meningioma] 2324 duplicates found
+    [pituitary] 2383 duplicates found
+    [notumor] 3004 duplicates found
+  Subtotal kaggle vs mendeley: 9826 duplicates
+
+  Comparing figshare vs mendeley  [same class only, threshold=2]
+    [glioma] 723 duplicates found
+    [meningioma] 775 duplicates found
+    [pituitary] 1009 duplicates found
+  Subtotal figshare vs mendeley: 2507 duplicates
+
+  Images flagged for removal : 9,992
+  Duplicate pair records     : 9,992
+
+  To remove: 9,992  |  Pair records: 9,992
+
+[4/5] Copying clean images to output folder...
+
+  Copying 12,336 clean images to output...
+  Skipping 9,992 duplicates.
+
+  Copying: 100%|████████████████████████████████████████████████████████████████████████████| 12336/12336 [00:12<00:00]
+
+  Copied: 12,336  |  Skipped: 9,992  |  Errors: 0
+
+[5/5] Saving reports...
+  [SAVED] CSV log -> D:\brain_tumor_project\outputs\logs\deduplication_report.csv
+
+======================================================================
+  MODULE 1 - STEP 3: Cross-Dataset Deduplication — SUMMARY
+======================================================================
+  Hamming threshold  : 2
+  Hash size          : 16x16 (256-bit pHash)
+  Cross-class guard  : ENABLED (same class only)
+  Dataset pairs      : kaggle-figshare, kaggle-mendeley, figshare-mendeley
+  Runtime            : 8.8 minutes
+
+  Total before deduplication : 22,328
+  Duplicates removed         : 9,992
+  Clean images remaining     : 12,336
+  Reduction                  : 44.75%
+
+  Removals by dataset:
+    kaggle       :     0 removed
+    figshare     :  1996 removed
+    mendeley     :  7996 removed
+
+  Removals by class:
+    glioma          :  2658 removed
+    meningioma      :  2627 removed
+    pituitary       :  2981 removed
+    notumor         :  1726 removed
+
+  Clean image counts after deduplication:
+  Dataset      Split     Glioma  Mening  Pituit  NoTumor   Total
+  ---------------------------------------------------------
+  kaggle       train       1400    1400    1400     1400    5600
+  kaggle       test         400     400     400      400    1600
+  figshare     all          829      58     181        0    1068
+  mendeley     train       1363     442     812      638    3255
+  mendeley     test         349     310      86       68     813
+
+  Sample duplicates (first 15 of 9,992 total):
+    dist=2  REMOVED figshare/all/glioma/figshare_1867.jpg
+           KEPT   kaggle/train/glioma/Tr-gl_1004.jpg
+    dist=2  REMOVED figshare/all/glioma/figshare_2638.jpg
+           KEPT   kaggle/train/glioma/Tr-gl_1014.jpg
+    dist=0  REMOVED figshare/all/glioma/figshare_2726.jpg
+           KEPT   kaggle/train/glioma/Tr-gl_1018.jpg
+    dist=0  REMOVED figshare/all/glioma/figshare_0754.jpg
+           KEPT   kaggle/train/glioma/Tr-gl_1030.jpg
+    dist=0  REMOVED figshare/all/glioma/figshare_2304.jpg
+           KEPT   kaggle/train/glioma/Tr-gl_1038.jpg
+    dist=2  REMOVED figshare/all/glioma/figshare_2406.jpg
+           KEPT   kaggle/train/glioma/Tr-gl_104.jpg
+    dist=0  REMOVED figshare/all/glioma/figshare_2261.jpg
+           KEPT   kaggle/train/glioma/Tr-gl_1057.jpg
+    dist=0  REMOVED figshare/all/glioma/figshare_0811.jpg
+           KEPT   kaggle/train/glioma/Tr-gl_1065.jpg
+    dist=2  REMOVED figshare/all/glioma/figshare_2253.jpg
+           KEPT   kaggle/train/glioma/Tr-gl_107.jpg
+    dist=2  REMOVED figshare/all/glioma/figshare_1903.jpg
+           KEPT   kaggle/train/glioma/Tr-gl_1071.jpg
+    dist=0  REMOVED figshare/all/glioma/figshare_2754.jpg
+           KEPT   kaggle/train/glioma/Tr-gl_1078.jpg
+    dist=2  REMOVED figshare/all/glioma/figshare_2676.jpg
+           KEPT   kaggle/train/glioma/Tr-gl_1083.jpg
+    dist=0  REMOVED figshare/all/glioma/figshare_2192.jpg
+           KEPT   kaggle/train/glioma/Tr-gl_1084.jpg
+    dist=0  REMOVED figshare/all/glioma/figshare_2768.jpg
+           KEPT   kaggle/train/glioma/Tr-gl_1088.jpg
+    dist=0  REMOVED figshare/all/glioma/figshare_2207.jpg
+           KEPT   kaggle/train/glioma/Tr-gl_1101.jpg
+
+  INTERPRETATION:
+  - Mendeley duplicates removed = Kaggle-origin images (Te-gl_/Tr-gl_ files).
+  - Remaining Mendeley = verified independent Epic/CSCR hospital scans.
+  - This is a methodological STRENGTH: the thesis can state that
+    'cross-dataset deduplication retained only the clinically
+    independent portion of the Mendeley dataset'.
+
+  Next step: Run Step 4 — Harmonization and LODO Split Creation.
+======================================================================
+
+  [SAVED] Summary -> D:\brain_tumor_project\outputs\logs\deduplication_summary.txt
+(venv) PS D:\brain_tumor_project>
+
+
+
+
+
+
+
+
+
+
+
+
+step 4
+
+ython module1_data_prep\step4_harmonize.py
+======================================================================
+  MODULE 1 — STEP 4: Harmonization & LODO Split Creation
+  Brain Tumor Classification Research
+======================================================================
+
+[CHECKING] Verifying deduplicated input exists...
+  [OK] Kaggle train: D:\brain_tumor_project\outputs\deduplicated\kaggle\train
+  [OK] Kaggle test: D:\brain_tumor_project\outputs\deduplicated\kaggle\test
+  [OK] Figshare: D:\brain_tumor_project\outputs\deduplicated\figshare\all
+  [OK] Mendeley train: D:\brain_tumor_project\outputs\deduplicated\mendeley\train
+  [OK] Mendeley test: D:\brain_tumor_project\outputs\deduplicated\mendeley\test
+
+[0/6] Cleaning previous harmonized output...
+  Removed previous output. Starting fresh.
+
+[1/6] Mendeley stratified 80/20 resplit...
+  Performing stratified 80/20 resplit of Mendeley dataset...
+    [glioma]  total=1712  train=1369  test= 343
+    [meningioma]  total= 752  train= 601  test= 151
+    [pituitary]  total= 898  train= 718  test= 180
+    [notumor]  total= 706  train= 564  test= 142
+
+[2/6] Offline augmentation — Figshare meningioma only...
+  Original Figshare meningioma images: 58
+  Generating 5 augmented variants per image...
+    Augmenting Figshare meningioma: 100%|█████████████████████████████████████████████| 58/58 [00:02<00:00, 26.58img/s]
+  Augmented images generated: 290
+  Total Figshare meningioma for training: 348
+
+[3/6] Assembling three LODO fold folders...
+
+  Assembling LODO Round 1 (Train: Figshare+Mendeley | Test: Kaggle)...
+    Round 1 train: 100%|██████████████████████████████████████████████████████████████| 4/4 [01:17<00:00, 19.41s/class]
+    Round 1 test : 100%|██████████████████████████████████████████████████████████████| 4/4 [00:35<00:00,  8.88s/class]
+
+  Assembling LODO Round 2 (Train: Kaggle+Mendeley | Test: Figshare)...
+    Round 2 train: 100%|██████████████████████████████████████████████████████████████| 4/4 [02:18<00:00, 34.71s/class]
+    Round 2 test : 100%|██████████████████████████████████████████████████████████████| 4/4 [00:01<00:00,  3.03class/s]
+
+  Assembling LODO Round 3 (Train: Kaggle+Figshare | Test: Mendeley)...
+    Round 3 train: 100%|██████████████████████████████████████████████████████████████| 4/4 [00:24<00:00,  6.19s/class]
+    Round 3 test : 100%|██████████████████████████████████████████████████████████████| 4/4 [00:12<00:00,  3.24s/class]
+
+[4/6] Cleaning up temporary augmentation folder...
+  Temp folder removed.
+
+[5/6] Generating charts and sample grids...
+  [SAVED] Fold count chart -> D:\brain_tumor_project\outputs\harmonized_dataset\plots\lodo_fold_counts.png
+  [SAVED] Sample grid round 1 -> D:\brain_tumor_project\outputs\harmonized_dataset\plots\sample_grid_round1.png
+  [SAVED] Sample grid round 2 -> D:\brain_tumor_project\outputs\harmonized_dataset\plots\sample_grid_round2.png
+  [SAVED] Sample grid round 3 -> D:\brain_tumor_project\outputs\harmonized_dataset\plots\sample_grid_round3.png
+
+[6/6] Saving reports...
+  [SAVED] CSV report -> D:\brain_tumor_project\outputs\harmonized_dataset\logs\harmonization_report.csv
+
+======================================================================
+  MODULE 1 - STEP 4: Harmonization & LODO Split Creation — SUMMARY
+======================================================================
+  Target image size  : 224x224 pixels
+  JPEG quality       : 95
+  Random seed        : 42
+  Mendeley resplit   : 80/20 stratified
+  Augmentation       : Figshare meningioma ONLY
+    Original images  : 58
+    Augmented copies : 290
+    Total for training: 348
+    Aug types used   : hflip, vflip, rot15, rot345, bright_up
+
+  Mendeley Resplit Result:
+  Class            Total  Train (80%)  Test (20%)
+  ------------------------------------------------
+  glioma            1712         1369         343
+  meningioma         752          601         151
+  pituitary          898          718         180
+  notumor            706          564         142
+
+  --------------------------------------------------------------------
+  LODO Round 1: Train = Figshare + Mendeley  |  Test = Kaggle
+  --------------------------------------------------------------------
+  Split     Glioma   Mening   Pituit  NoTumor   Total
+  ----------------------------------------------
+  train       2198      949 (incl. aug)      899      564    4610
+  test         400      400                  400      400    1600
+
+  --------------------------------------------------------------------
+  LODO Round 2: Train = Kaggle + Mendeley  |  Test = Figshare
+  --------------------------------------------------------------------
+  Split     Glioma   Mening   Pituit  NoTumor   Total
+  ----------------------------------------------
+  train       2769     2001                 2118     1964    8852
+  test         829       58                  181        0    1068
+
+  --------------------------------------------------------------------
+  LODO Round 3: Train = Kaggle + Figshare  |  Test = Mendeley
+  --------------------------------------------------------------------
+  Split     Glioma   Mening   Pituit  NoTumor   Total
+  ----------------------------------------------
+  train       2229     1748 (incl. aug)     1581     1400    6958
+  test         343      151                  180      142     816
+
+  AUGMENTATION NOTE:
+  Offline augmentation was applied exclusively to Figshare meningioma
+  images (58 independent originals after cross-dataset deduplication).
+  Augmented copies appear ONLY in training splits, never in test sets.
+  Augmentation operations: horizontal flip, vertical flip,
+  rotation +15deg, rotation -15deg, brightness increase +25%.
+
+  LODO EVALUATION DESIGN:
+  Round 1 — Held-out test dataset: Kaggle
+            Tests generalization to the most widely-used benchmark.
+  Round 2 — Held-out test dataset: Figshare
+            Tests generalization to original clinical MRI source.
+            Note: Figshare meningioma test set = 58 images (small).
+            Report confidence intervals for Round 2 meningioma metrics.
+  Round 3 — Held-out test dataset: Mendeley
+            Tests generalization to independent Epic/CSCR hospital data.
+
+  Next step: Module 2 — Build Hybrid CNN-ViT Model Architecture.
+======================================================================
+
+  [SAVED] Summary -> D:\brain_tumor_project\outputs\harmonized_dataset\logs\harmonization_summary.txt
+
+======================================================================
+  STEP 4 COMPLETE — LODO FOLDS READY
+======================================================================
+
+  Output location: D:\brain_tumor_project\outputs\harmonized_dataset
+
+  Folder structure:
+    lodo_round1\train\  —  4,610 images total
+    lodo_round1\test\  —  1,600 images total
+    lodo_round2\train\  —  8,852 images total
+    lodo_round2\test\  —  1,068 images total
+    lodo_round3\train\  —  6,958 images total
+    lodo_round3\test\  —  816 images total
+
+  Charts  : D:\brain_tumor_project\outputs\harmonized_dataset\plots
+  Logs    : D:\brain_tumor_project\outputs\harmonized_dataset\logs
+
+  You are now ready for Module 2: Hybrid CNN-ViT Model Architecture.
+======================================================================

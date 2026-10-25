@@ -1,0 +1,122 @@
+{
+  "vit": {
+    "accuracy": 0.8946,
+    "macro_precision": 0.8813,
+    "macro_recall": 0.9212,
+    "macro_f1": 0.8934,
+    "macro_auc": 0.9904,
+    "per_class": {
+      "glioma": {
+        "precision": 1.0,
+        "recall": 0.8134,
+        "f1": 0.8971,
+        "auc": 0.9804,
+        "support": 343,
+        "tp": 279,
+        "fp": 0,
+        "fn": 64,
+        "tn": 473
+      },
+      "meningioma": {
+        "precision": 0.8192,
+        "recall": 0.9603,
+        "f1": 0.8841,
+        "auc": 0.994,
+        "support": 151,
+        "tp": 145,
+        "fp": 32,
+        "fn": 6,
+        "tn": 633
+      },
+      "pituitary": {
+        "precision": 0.9425,
+        "recall": 0.9111,
+        "f1": 0.9266,
+        "auc": 0.9913,
+        "support": 180,
+        "tp": 164,
+        "fp": 10,
+        "fn": 16,
+        "tn": 626
+      },
+      "notumor": {
+        "precision": 0.7634,
+        "recall": 1.0,
+        "f1": 0.8659,
+        "auc": 0.9959,
+        "support": 142,
+        "tp": 142,
+        "fp": 44,
+        "fn": 0,
+        "tn": 630
+      }
+    },
+    "confusion_matrix": [
+      [
+        279,
+        26,
+        5,
+        33
+      ],
+      [
+        0,
+        145,
+        5,
+        1
+      ],
+      [
+        0,
+        6,
+        164,
+        10
+      ],
+      [
+        0,
+        0,
+        0,
+        142
+      ]
+    ]
+  },
+  "cnn": {
+    "accuracy": 0.8713,
+    "macro_f1": 0.8717,
+    "confusion_matrix": [
+      [
+        262,
+        37,
+        9,
+        35
+      ],
+      [
+        1,
+        144,
+        6,
+        0
+      ],
+      [
+        0,
+        7,
+        167,
+        6
+      ],
+      [
+        0,
+        1,
+        3,
+        138
+      ]
+    ]
+  },
+  "n_samples": 816,
+  "present_classes": [
+    "glioma",
+    "meningioma",
+    "pituitary",
+    "notumor"
+  ],
+  "protocol": "lodo3",
+  "description": "LODO Round 3 (Test: Mendeley)",
+  "img_size": 320,
+  "tta": true
+}

@@ -1,0 +1,38 @@
+{
+  "architecture": "StandaloneViT \u2014 vit_small_patch16 (320px)",
+  "protocol": "lodo3",
+  "n_test": 816,
+  "accuracy": 0.9485,
+  "macro_f1": 0.9453,
+  "macro_auc": 0.9949,
+  "per_class": {
+    "glioma": {
+      "precision": 0.973,
+      "recall": 0.9446,
+      "f1": 0.9586,
+      "auc": 0.9881,
+      "support": 343
+    },
+    "meningioma": {
+      "precision": 0.8795,
+      "recall": 0.9669,
+      "f1": 0.9211,
+      "auc": 0.9965,
+      "support": 151
+    },
+    "notumor": {
+      "precision": 0.9375,
+      "recall": 0.9507,
+      "f1": 0.9441,
+      "auc": 0.996,
+      "support": 142
+    },
+    "pituitary": {
+      "precision": 0.9769,
+      "recall": 0.9389,
+      "f1": 0.9575,
+      "auc": 0.9991,
+      "support": 180
+    }
+  }
+}

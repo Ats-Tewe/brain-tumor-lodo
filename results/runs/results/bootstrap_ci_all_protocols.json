@@ -1,0 +1,125 @@
+{
+  "merged": {
+    "description": "Merged Baseline",
+    "n_test": 1237,
+    "present_classes": [
+      "glioma",
+      "meningioma",
+      "pituitary",
+      "notumor"
+    ],
+    "point_accuracy": 0.9927,
+    "accuracy": {
+      "mean": 0.9928,
+      "ci_lo": 0.9879,
+      "ci_hi": 0.9968,
+      "valid_pct": 100.0
+    },
+    "macro_f1": {
+      "mean": 0.9924,
+      "ci_lo": 0.9873,
+      "ci_hi": 0.9968,
+      "valid_pct": 100.0
+    },
+    "macro_auc": {
+      "mean": 0.9999,
+      "ci_lo": 0.9998,
+      "ci_hi": 1.0,
+      "valid_pct": 100.0
+    },
+    "n_bootstrap": 2000,
+    "ci_level": 0.95
+  },
+  "lodo1": {
+    "description": "LODO Round 1 (Test: Kaggle)",
+    "n_test": 1600,
+    "present_classes": [
+      "glioma",
+      "meningioma",
+      "pituitary",
+      "notumor"
+    ],
+    "point_accuracy": 0.9513,
+    "accuracy": {
+      "mean": 0.951,
+      "ci_lo": 0.9406,
+      "ci_hi": 0.9613,
+      "valid_pct": 100.0
+    },
+    "macro_f1": {
+      "mean": 0.9508,
+      "ci_lo": 0.94,
+      "ci_hi": 0.9609,
+      "valid_pct": 100.0
+    },
+    "macro_auc": {
+      "mean": 0.992,
+      "ci_lo": 0.9887,
+      "ci_hi": 0.995,
+      "valid_pct": 100.0
+    },
+    "n_bootstrap": 2000,
+    "ci_level": 0.95
+  },
+  "lodo2": {
+    "description": "LODO Round 2 (Test: Figshare)",
+    "n_test": 1068,
+    "present_classes": [
+      "glioma",
+      "meningioma",
+      "pituitary"
+    ],
+    "point_accuracy": 0.9925,
+    "accuracy": {
+      "mean": 0.9925,
+      "ci_lo": 0.9869,
+      "ci_hi": 0.9972,
+      "valid_pct": 100.0
+    },
+    "macro_f1": {
+      "mean": 0.9726,
+      "ci_lo": 0.9513,
+      "ci_hi": 0.9911,
+      "valid_pct": 100.0
+    },
+    "macro_auc": {
+      "mean": 0.9997,
+      "ci_lo": 0.9992,
+      "ci_hi": 1.0,
+      "valid_pct": 100.0
+    },
+    "n_bootstrap": 2000,
+    "ci_level": 0.95
+  },
+  "lodo3": {
+    "description": "LODO Round 3 (Test: Mendeley)",
+    "n_test": 816,
+    "present_classes": [
+      "glioma",
+      "meningioma",
+      "pituitary",
+      "notumor"
+    ],
+    "point_accuracy": 0.8946,
+    "accuracy": {
+      "mean": 0.8952,
+      "ci_lo": 0.875,
+      "ci_hi": 0.9154,
+      "valid_pct": 100.0
+    },
+    "macro_f1": {
+      "mean": 0.8937,
+      "ci_lo": 0.8721,
+      "ci_hi": 0.9148,
+      "valid_pct": 100.0
+    },
+    "macro_auc": {
+      "mean": 0.9905,
+      "ci_lo": 0.9857,
+      "ci_hi": 0.9945,
+      "valid_pct": 100.0
+    },
+    "n_bootstrap": 2000,
+    "ci_level": 0.95
+  }
+}

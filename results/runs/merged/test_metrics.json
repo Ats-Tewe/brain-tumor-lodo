@@ -1,0 +1,122 @@
+{
+  "vit": {
+    "accuracy": 0.9927,
+    "macro_precision": 0.9919,
+    "macro_recall": 0.9927,
+    "macro_f1": 0.9923,
+    "macro_auc": 0.9999,
+    "per_class": {
+      "glioma": {
+        "precision": 0.9977,
+        "recall": 0.9931,
+        "f1": 0.9954,
+        "auc": 1.0,
+        "support": 435,
+        "tp": 432,
+        "fp": 1,
+        "fn": 3,
+        "tn": 801
+      },
+      "meningioma": {
+        "precision": 0.9737,
+        "recall": 0.9923,
+        "f1": 0.9829,
+        "auc": 0.9997,
+        "support": 261,
+        "tp": 259,
+        "fp": 7,
+        "fn": 2,
+        "tn": 969
+      },
+      "pituitary": {
+        "precision": 1.0,
+        "recall": 0.9896,
+        "f1": 0.9948,
+        "auc": 1.0,
+        "support": 289,
+        "tp": 286,
+        "fp": 0,
+        "fn": 3,
+        "tn": 948
+      },
+      "notumor": {
+        "precision": 0.996,
+        "recall": 0.996,
+        "f1": 0.996,
+        "auc": 1.0,
+        "support": 252,
+        "tp": 251,
+        "fp": 1,
+        "fn": 1,
+        "tn": 984
+      }
+    },
+    "confusion_matrix": [
+      [
+        432,
+        3,
+        0,
+        0
+      ],
+      [
+        1,
+        259,
+        0,
+        1
+      ],
+      [
+        0,
+        3,
+        286,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        251
+      ]
+    ]
+  },
+  "cnn": {
+    "accuracy": 0.9863,
+    "macro_f1": 0.9858,
+    "confusion_matrix": [
+      [
+        429,
+        6,
+        0,
+        0
+      ],
+      [
+        3,
+        254,
+        3,
+        1
+      ],
+      [
+        1,
+        0,
+        288,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        249
+      ]
+    ]
+  },
+  "n_samples": 1237,
+  "present_classes": [
+    "glioma",
+    "meningioma",
+    "pituitary",
+    "notumor"
+  ],
+  "protocol": "merged",
+  "description": "Merged Baseline",
+  "img_size": 320,
+  "tta": true
+}

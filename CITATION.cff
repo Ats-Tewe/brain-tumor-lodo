@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code or the trained weights, please cite the paper."
+title: "Pretraining, Not Architecture, Determines Cross-Institutional Generalization in Brain Tumor MRI Classification"
+authors:
+  - family-names: Hagos
+    given-names: Atsbaha Teweldemedhn
+    affiliation: "Software Engineering, Mekelle University, Mekelle, Ethiopia"
+  - family-names: Demewez
+    given-names: Guesh Dagnew
+    affiliation: "Computer Science, Mekelle University, Mekelle, Ethiopia"
+  - family-names: Fkadu
+    given-names: Desta Teklu
+    affiliation: "Electrical and Computer Engineering, Mekelle University, Mekelle, Ethiopia"
+  - family-names: Gebremariam
+    given-names: Abrhaley Gebreslassie
+    affiliation: "Software Engineering, Adigrat University, Adigrat, Ethiopia"
+year: 2026
+license: MIT
+keywords:
+  - brain tumor classification
+  - magnetic resonance imaging
+  - domain generalization
+  - transfer learning
+  - model calibration
+  - reproducibility

@@ -1,0 +1,20 @@
+================================================================
+  TRAINING SUMMARY — LODO3 (v2: 320px)
+================================================================
+
+  Description:  LODO Round 3 — Train: Kaggle+Figshare | Test: Mendeley
+  Resolution:   320x320 (v2)
+  Total time:   153.1 minutes
+  Epochs run:   85  (max=100)
+  Best epoch:   70
+
+  v2 HYPERPARAMETERS
+  Resolution=320  LR=0.0003  WD=0.0001  BS=24
+  Focal gamma=2.0  Aux weight=0.3  Label smoothing=0.1
+  Early stop patience=15  Warmup epochs=5
+  Augmentation: RandAugment(n=2,m=9) + RandomErasing(p=0.25)
+
+  Best val loss: 0.0017  Best val acc: 1.0000
+  Final train acc: 0.9929
+
+================================================================

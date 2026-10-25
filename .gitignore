@@ -1,0 +1,50 @@
+# Model weights. Every .pth here exceeds GitHub's 100 MB hard limit
+# (best_model.pth is 310 MB); they are hosted on Zenodo instead.
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# Source image collections. 22,328 MRI images, publicly available from the
+# three sources named in data/README.md. Not ours to redistribute.
+datasets/
+data/figshare/
+data/kaggle/
+data/mendeley/
+outputs/harmonized_dataset/
+
+# Environment
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+node_modules/
+
+# Bundles and backups
+*.tar.gz
+*.tgz
+*.zip
+*.bak
+*.prekey.bak
+
+# Build products
+figures/figures_out/
+paper/equations_out/
+paper/*.docx
+paper/*.pdf
+paper/manuscript.json
+*.aux
+*.log
+*.out
+*.synctex.gz
+
+# OS
+.DS_Store
+Thumbs.db
+
+# build bookkeeping and material that is not published
+MANIFEST.json
+paper/
+figures/
+

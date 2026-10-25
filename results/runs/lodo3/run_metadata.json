@@ -1,0 +1,13 @@
+{
+  "timestamp_utc": "2026-08-23T14:28:22.881122+00:00",
+  "git_commit": "unknown (not a git repo, or git unavailable)",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "torch_version": "2.7.1+cu118",
+  "cuda_available": true,
+  "config": {
+    "script": "temperature_scaling_fixed",
+    "mode": "both",
+    "k": 5,
+    "seed": 42
+  }
+}

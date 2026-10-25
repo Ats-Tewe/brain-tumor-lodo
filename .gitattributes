@@ -1,0 +1,36 @@
+# Line endings.
+#
+# WHY THIS MATTERS HERE, AND NOT JUST COSMETICALLY
+# ------------------------------------------------
+# Git on Windows checks files out with CRLF by default and commits them that
+# way. For .py and .md that is only noise. For the shell drivers in scripts/ it
+# is a bug: a Linux or macOS box that clones this repository runs
+#
+#     bash scripts/run_all_experiments.sh
+#
+# and gets "bad interpreter: /bin/bash^M", because the carriage return is part
+# of the shebang line. The reproduction campaign stops before it starts, and
+# the error names a file that looks perfectly fine when opened.
+#
+# Forcing LF in the repository fixes it for every platform. Windows editors
+# have handled LF for years, so nothing is lost locally.
+
+* text=auto eol=lf
+
+*.sh   text eol=lf
+*.py   text eol=lf
+*.js   text eol=lf
+*.md   text eol=lf
+*.txt  text eol=lf
+*.json text eol=lf
+*.csv  text eol=lf
+*.cff  text eol=lf
+*.yml  text eol=lf
+
+# Never touch these.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.pdf  binary
+*.pth  binary
+*.zip  binary

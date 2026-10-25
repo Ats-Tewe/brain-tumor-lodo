@@ -1,0 +1,23 @@
+{
+  "architecture": {
+    "backbone": "vit_small_r26_s32_224",
+    "img_size": 320,
+    "n_tokens": 100,
+    "cnn_feature_channels": 2048,
+    "embed_dim": 384,
+    "total_params": 36076232,
+    "trainable_params": 36076232
+  },
+  "stopgradient_max_stem_grad": 0.0,
+  "tokens_match_existing_hybrid": true,
+  "attention_capture": {
+    "ok": true,
+    "n_layers": 12,
+    "map_shape": [
+      2,
+      6,
+      101,
+      101
+    ]
+  }
+}

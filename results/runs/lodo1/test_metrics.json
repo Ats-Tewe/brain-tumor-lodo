@@ -1,0 +1,122 @@
+{
+  "vit": {
+    "accuracy": 0.9513,
+    "macro_precision": 0.9516,
+    "macro_recall": 0.9513,
+    "macro_f1": 0.9511,
+    "macro_auc": 0.9919,
+    "per_class": {
+      "glioma": {
+        "precision": 0.9231,
+        "recall": 0.96,
+        "f1": 0.9412,
+        "auc": 0.9824,
+        "support": 400,
+        "tp": 384,
+        "fp": 32,
+        "fn": 16,
+        "tn": 1168
+      },
+      "meningioma": {
+        "precision": 0.9549,
+        "recall": 0.9,
+        "f1": 0.9266,
+        "auc": 0.9889,
+        "support": 400,
+        "tp": 360,
+        "fp": 17,
+        "fn": 40,
+        "tn": 1183
+      },
+      "pituitary": {
+        "precision": 0.9676,
+        "recall": 0.97,
+        "f1": 0.9688,
+        "auc": 0.9983,
+        "support": 400,
+        "tp": 388,
+        "fp": 13,
+        "fn": 12,
+        "tn": 1187
+      },
+      "notumor": {
+        "precision": 0.9606,
+        "recall": 0.975,
+        "f1": 0.9677,
+        "auc": 0.9982,
+        "support": 400,
+        "tp": 390,
+        "fp": 16,
+        "fn": 10,
+        "tn": 1184
+      }
+    },
+    "confusion_matrix": [
+      [
+        384,
+        6,
+        1,
+        9
+      ],
+      [
+        26,
+        360,
+        7,
+        7
+      ],
+      [
+        3,
+        9,
+        388,
+        0
+      ],
+      [
+        3,
+        2,
+        5,
+        390
+      ]
+    ]
+  },
+  "cnn": {
+    "accuracy": 0.9456,
+    "macro_f1": 0.9454,
+    "confusion_matrix": [
+      [
+        377,
+        10,
+        0,
+        13
+      ],
+      [
+        27,
+        355,
+        8,
+        10
+      ],
+      [
+        4,
+        7,
+        387,
+        2
+      ],
+      [
+        2,
+        4,
+        0,
+        394
+      ]
+    ]
+  },
+  "n_samples": 1600,
+  "present_classes": [
+    "glioma",
+    "meningioma",
+    "pituitary",
+    "notumor"
+  ],
+  "protocol": "lodo1",
+  "description": "LODO Round 1 (Test: Kaggle)",
+  "img_size": 320,
+  "tta": true
+}

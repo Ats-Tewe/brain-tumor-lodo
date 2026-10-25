@@ -1,0 +1,74 @@
+{
+  "dualhead_hybrid": {
+    "name": "DualHead Hybrid CNN-ViT",
+    "total_params": 25840388,
+    "trainable_params": 25840388,
+    "component_breakdown": {
+      "backbone_efficientnet_b0": 4007548,
+      "patch_tokenization_bridge": 531840,
+      "vit_transformer_12_blocks": 21293568,
+      "vit_layer_norm": 768,
+      "cnn_auxiliary_head": 5124,
+      "vit_primary_head": 1540,
+      "total_trainable": 25840388
+    },
+    "inference_time": {
+      "mean_ms": 10.12,
+      "std_ms": 0.03,
+      "min_ms": 10.09,
+      "max_ms": 10.32,
+      "n_runs": 100,
+      "batch_size": 1
+    }
+  },
+  "cnn_only": {
+    "name": "CNN-only (EfficientNet-B0)",
+    "total_params": 4012672,
+    "trainable_params": 4012672,
+    "inference_time": {
+      "mean_ms": 5.64,
+      "std_ms": 0.03,
+      "min_ms": 5.61,
+      "max_ms": 5.85,
+      "n_runs": 100,
+      "batch_size": 1
+    }
+  },
+  "standalone_vit": {
+    "name": "Standalone ViT-Small",
+    "total_params": 21745540,
+    "trainable_params": 21745540,
+    "inference_time": {
+      "mean_ms": 3.52,
+      "std_ms": 0.02,
+      "min_ms": 3.5,
+      "max_ms": 3.6,
+      "n_runs": 100,
+      "batch_size": 1
+    }
+  },
+  "efficientnet_b0_baseline": {
+    "name": "EfficientNet-B0 (plain, reference)",
+    "total_params": 4012672,
+    "inference_time": {
+      "mean_ms": 5.64,
+      "std_ms": 0.04,
+      "min_ms": 5.61,
+      "max_ms": 5.94,
+      "n_runs": 100,
+      "batch_size": 1
+    }
+  },
+  "vit_small_baseline": {
+    "name": "ViT-S/16 (plain, reference)",
+    "total_params": 21745540,
+    "inference_time": {
+      "mean_ms": 3.55,
+      "std_ms": 0.01,
+      "min_ms": 3.54,
+      "max_ms": 3.64,
+      "n_runs": 100,
+      "batch_size": 1
+    }
+  }
+}

@@ -1,0 +1,21 @@
+# Minimal dependencies for running ablation_vit_standalone_fixed.py on a
+# remote GPU server. This is NOT the full project environment -- it covers only
+# what the ablation and the figure scripts import.
+#
+# torch/torchvision are installed SEPARATELY with the right CUDA wheel index,
+# because the version here must match the server's driver. See the setup guide.
+#
+# Local machine runs torch 2.7.1+cu118. On a 4090 with a recent driver, cu121 or
+# cu124 wheels are a better match and noticeably faster. Either works.
+
+timm==1.0.25
+numpy==2.3.5
+pillow==12.0.0
+matplotlib==3.10.8
+tqdm==4.67.3
+
+# Only needed if you also run bootstrap_ci.py / evaluate.py on the server.
+# Harmless to install regardless.
+scikit-learn==1.8.0
+seaborn==0.13.2
+pandas==3.0.1
